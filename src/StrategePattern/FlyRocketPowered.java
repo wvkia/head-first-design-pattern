@@ -1,6 +1,4 @@
-package StrategePattern.behaviorImpl;
-
-import StrategePattern.behavior.FlyBehavior;
+package StrategePattern;
 
 public class FlyRocketPowered implements FlyBehavior {
 

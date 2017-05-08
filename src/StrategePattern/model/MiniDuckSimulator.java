@@ -1,6 +1,6 @@
 package StrategePattern.model;
 
-import StrategePattern.behaviorImpl.FlyRocketPowered;
+import StrategePattern.FlyRocketPowered;
 
 public class MiniDuckSimulator {
 	public static void main(String[] args) {

@@ -1,7 +1,7 @@
 package StrategePattern.model;
 
-import StrategePattern.behaviorImpl.FlyWithWings;
-import StrategePattern.behaviorImpl.Quack;
+import StrategePattern.FlyWithWings;
+import StrategePattern.Quack;
 
 public class MallarDuck extends Duck {
 

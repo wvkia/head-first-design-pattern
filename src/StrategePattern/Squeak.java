@@ -1,6 +1,4 @@
-package StrategePattern.behaviorImpl;
-
-import StrategePattern.behavior.QuackBehavior;
+package StrategePattern;
 
 /**
  * squeak½Ð

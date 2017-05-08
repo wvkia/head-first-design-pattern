@@ -1,4 +1,4 @@
-package StrategePattern.behavior;
+package StrategePattern;
 /**
  * quack½Ð½Ó¿Ú
  * @author wk
