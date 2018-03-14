@@ -1,7 +1,7 @@
 package StrategePattern;
 
 /**
- * ßÉßÉ½Ð
+ * quack implements
  * 
  * @author wk
  *

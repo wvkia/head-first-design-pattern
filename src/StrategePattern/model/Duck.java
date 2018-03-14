@@ -3,8 +3,14 @@ package StrategePattern.model;
 import StrategePattern.FlyBehavior;
 import StrategePattern.QuackBehavior;
 
+/**
+ * Duck abstract class
+ *
+ */
 public abstract class Duck {
+	//fly Algorithm
 	FlyBehavior flyBehavior;
+	//quack Algorithm
 	QuackBehavior quackBehavior;
 
 	public Duck() {

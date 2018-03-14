@@ -1,12 +1,12 @@
 package StrategePattern;
 /**
- * ·ÉĞĞ½Ó¿Ú
+ * é£è¡Œè¡Œä¸º ç®—æ³•æ—
  * @author wk
  *
  */
 public interface FlyBehavior {
 	/**
-	 * ÊµÏÖ·ÉĞĞ½Ó¿ÚµÄÀà±ØĞëÊµÏÖÕâ¸öfly·½·¨
+	 * æ–¹æ³•
 	 */
 	void fly();
 }

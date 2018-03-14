@@ -1,12 +1,12 @@
 package StrategePattern;
 /**
- * quack叫接口
+ * quack Algorithm family
  * @author wk
  *
  */
 public interface QuackBehavior {
 	/**
-	 * 实现quack叫接口的类必须实现quack方法
+	 * quack method
 	 */
 	void quack();
 }

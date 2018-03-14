@@ -1,7 +1,7 @@
 package StrategePattern;
 
 /**
- * ²»»á½Ð
+ * muteQuack implements
  * 
  * @author wk
  *

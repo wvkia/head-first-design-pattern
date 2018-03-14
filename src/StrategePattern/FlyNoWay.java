@@ -1,7 +1,7 @@
 package StrategePattern;
 
 /**
- * ²»ÄÜ·ÉĞĞ
+ * ????? ??
  * @author wk
  *
  */

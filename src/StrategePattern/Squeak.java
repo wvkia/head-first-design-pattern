@@ -1,7 +1,7 @@
 package StrategePattern;
 
 /**
- * squeak½Ð
+ * squeak Algorithm family
  * 
  * @author wk
  *
