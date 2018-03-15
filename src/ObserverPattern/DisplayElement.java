@@ -1,7 +1,7 @@
 package ObserverPattern;
 
 /**
- * ÏÔÊ¾×´Ì¬²ÎÊı
+ *
  * 
  * @author wk
  *

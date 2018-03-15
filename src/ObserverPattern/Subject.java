@@ -1,23 +1,22 @@
 package ObserverPattern;
 /**
- * Ö÷Ìâ½Ó¿Ú£¬ÓÃÀ´¹ÜÀí¹Û²ìÕß
+ *ä¸»é¢˜æ¥å£
  * @author wk
  *
  */
 public interface Subject {
 
-	/**
-	 * ×¢²áÎª¹Û²ìÕß
+	/**æ³¨å†Œè§‚å¯Ÿè€…
 	 * @param o
 	 */
 	void registObserver(Observer o);
 	/**
-	 * É¾³ı¹Û²ìÕß
+	 * åˆ é™¤è§‚å¯Ÿè€…
 	 * @param o
 	 */
 	void removeObserver(Observer o);
 	/**
-	 * µ±Ö÷Ìâ×´Ì¬¸Ä±ä£¬µ÷ÓÃ·½·¨Í¨ÖªËùÓĞ¹Û²ìÕß
+	 * é€šçŸ¥è§‚å¯Ÿè€…
 	 */
 	void notifyObservers();
 

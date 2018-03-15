@@ -1,21 +1,20 @@
 package ObserverPattern;
 
 /**
- * currentCondition¹Û²ìÕß ÊµÏÖobserver¹Û²ìÕß½Ó¿Ú
- * 
+ * currentCondition
+ * å…·ä½“è§‚å¯Ÿè€…å®ç°
  * @author wk
  *
  */
 public class CurrentConditionsDisplay implements Observer, DisplayElement {
 	private float tempe;
 	private float pressure;
-	// ±£ÁôÒ»¸öÖ÷ÌâµÄÒıÓÃ
+	//è§‚å¯Ÿè€…ä¿æŒä¸€ä»½ä¸»é¢˜çš„å¼•ç”¨ï¼Œç”¨æ¥æ³¨å†Œå’Œåˆ é™¤è‡ªå·±
 	private Subject weatherData;
 
 	public CurrentConditionsDisplay(Subject weatherData) {
 		// TODO Auto-generated constructor stub
 		this.weatherData = weatherData;
-		// ½«×Ô¼º×¢²á½øÈ¥
 		weatherData.registObserver(this);
 	}
 

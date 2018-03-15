@@ -1,15 +1,15 @@
 package ObserverPattern;
 
 /**
- * ËùÓĞ¹Û²ìÕß±ØĞëÊµÏÖObserver½Ó¿Ú
- * 
+ *
+ * è§‚å¯Ÿè€…æ¥å£
  * @author wk
  *
  */
 public interface Observer {
 	/**
-	 * µ±Öµ¸ü¸ÄÊ±£¬Ö÷Ìâ»á°ÑÕâĞ©×´Ì¬Öµµ±×÷·½·¨µÄ²ÎÊı£¬´«µİ¸ø¹Û²ìÕß
-	 * 
+	 *
+	 * æ›´æ–°è‡ªèº«è¡Œä¸º
 	 * @param tempe
 	 * @param pressure
 	 */

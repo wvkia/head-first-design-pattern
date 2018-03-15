@@ -1,1 +1,28 @@
-策略模式
+策略模式：
+    定义一系列算法，将每个算法封装起来，并让他们可以替换
+
+主要角色
+    Context：环境类
+    Strategy：抽象策略类
+    ConcreteStrategy：具体策略类
+
+伪代码：
+    // 算法族
+    interface Strategy{
+        void method();
+    }
+
+    //算法族的具体实现
+    class FirstStrategy implemts Strategy{
+    }
+    class SecondStrategy implements Strategy{
+    }
+
+    //环境类，用来不同场景使用不同策略
+    class Context {
+        Strategy strategy;
+
+        void excu(){
+            strategy.method();
+        }
+    }

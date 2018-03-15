@@ -4,13 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * ÌìÆøÊı¾İÀà£¬ÊµÏÖÖ÷Ìâ½Ó¿Ú
- * 
+ *
  * @author wk
  *
  */
 public class WeatherData implements Subject {
-	private List observers; // ¼ÇÂ¼¹Û²ìÕß
+	private List observers; //ä¿æŒä¸€ä¸ªè§‚å¯Ÿè€…çš„é›†åˆå¼•ç”¨
 	private float tempe;
 	private float pressure;
 
@@ -41,6 +40,7 @@ public class WeatherData implements Subject {
 		// TODO Auto-generated method stub
 		for (int i = 0; i < observers.size(); i++) {
 			Observer ob = (Observer) observers.get(i);
+			//è°ƒç”¨è§‚å¯Ÿè€…çš„æ›´æ–°æ–¹æ³•ï¼Œé€šçŸ¥è§‚å¯Ÿè€…
 			ob.update(tempe, pressure);
 		}
 	}
