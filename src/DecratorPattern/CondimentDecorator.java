@@ -1,5 +1,8 @@
 package DecratorPattern;
 
+/**
+ * 装饰器超类
+ */
 public abstract class CondimentDecorator extends Beverage {
 
 	

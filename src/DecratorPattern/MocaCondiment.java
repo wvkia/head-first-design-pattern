@@ -1,22 +1,23 @@
 package DecratorPattern;
 
+/**
+ * 继承装饰器超类，具体装饰器实现
+ */
 public class MocaCondiment extends CondimentDecorator {
-	Beverage beverage;
+	Beverage beverage;	//这个引用记录被装饰者
 
-	public MocaCondiment(Beverage beverage) {
+	public MocaCondiment(Beverage beverage) {	//通常使用构造器完成引用的传递
 		this.beverage = beverage;
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override
 	public String getDescription() {
-		// TODO Auto-generated method stub
 		return beverage.getDescription() + " moca";
 	}
 
+	//行为的获取通过组合对象行为
 	@Override
 	public double cost() {
-		// TODO Auto-generated method stub
 		return .2 + beverage.cost();
 	}
 

@@ -1,0 +1,48 @@
+装饰者模式（用修饰类包裹原来的对象，达到动态为对象扩展功能）
+    和继承的区别：继承在编译时增加行为，装饰器在运行时增加行为
+
+装饰者和被装饰对象有相同的超类型
+可以用一个或多个装饰者包装一个对象
+既然装饰者和被装饰对象是相同超类型，在用到原始对象的地方都可以使用包装后的对象
+装饰者可以在所委托被装饰者的行为之前或者之后，加上自己的行为，达到特定目的
+对象可以任何时候被装饰，可以运行时动态、不限量使用装饰器
+
+
+//装饰器和被装饰者共同的超类
+public interface BaseClass{
+    void method();
+}
+//被装饰对象
+public class SimpleClass implements BaseClass{
+    public void method(){
+
+    }
+}
+//装饰器本身
+public abstract class  Decorator implements BaseClass{
+    private BaseClass decorateObject;   //包含一个被装饰者对象的引用
+    public Decorator(BaseClass baseObject){ //通常使用构造器的形式传递引用
+        this.decorateObject=baseObject;
+    }
+
+    //装饰器的方法
+    public void method(){
+        //加上自己的处理
+        decorateObject.method();        //然后调用被装饰者对象的方法
+    }
+}
+
+//可以实现自己的装饰器
+public class SimpelDecorator extends Decorator{
+    public SimpleDecortor(BaseClass ob){
+        super(ob);
+    }
+    public void method(){
+        super.method();
+        //处理
+    }
+}
+
+注意：
+    装饰器模式本质上是通过组合的方式进行的，接口或者继承只是为了获得 共同的类型匹配，而行为的获取是通过组合的引用获取的，在将装饰器
+ 和被装饰者组合时，获取加入了新的行为
