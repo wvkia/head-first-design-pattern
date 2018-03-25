@@ -7,6 +7,6 @@ public class WeathJTest {
 
         WeatherDataJ weatherDataJ = new WeatherDataJ();
         CurrentConditionDisplayJ displayJ = new CurrentConditionDisplayJ(weatherDataJ);
-        weatherDataJ.setMeasurement(1.2f,43.4f);
+        weatherDataJ.setMeasurements(1.2f,43.4f);
     }
 }

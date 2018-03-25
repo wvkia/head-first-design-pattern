@@ -1,0 +1,43 @@
+单例模式：确保一个类只有一个实例，并且提供一个全局访问点
+
+最简单的
+    public class single{
+        private static single one;  //静态变量保存唯一实例
+        private single(){}              //私有构造器，只限制类内使用，防止外部构造
+        public static single createinstance(){
+            if one == null:                     //如果为null，才进行初始化，延迟初始化
+                one=new single()
+             return one;
+        }
+    }
+
+但在多线程情况下，上述代码会出现问题，可以通过synchronized关键字进行同步
+    public static synchronized single createInstane(){}
+
+  但这样的话会有性能问题，还有就是只有第一次才需要同步，之后的每次其实都不需要同步，但进入方法都会被syncrhonized进行锁定，性能问题更大了
+
+  可以使用“急切”创建实例
+  private static single one=new single();   //这个在JVM类加载的初始化阶段创建，多线程也是获取同一个实例
+  private single(){}
+  public static single createInstance(){
+    return one;
+  }
+
+  或者“双重检查加锁”
+   public class single{
+    private     volatile    static single one;  注意volatile关键字
+    private single(){}
+
+    public static single create(){
+        if( one == null){                   只有第一次会进入
+
+            synchronized(one){          对类进行加锁
+
+                if（one == null）{        再次判断，防止已经存在线程创建了对象
+                    one=new single();
+                }
+            }
+        }
+        return one;
+    }
+   }
