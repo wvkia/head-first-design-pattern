@@ -1,0 +1,79 @@
+命令模式：
+    将“请求”封装成对象，以便使用不同的请求、队列或者日志来参数化其他对象
+
+
+
+主要角色：
+    Command：命令抽象类
+    ConcreteCommand：具体命令类
+    Invoker：调用者
+    Receiver：接收者
+    Client：客户端
+
+    //命令抽象类
+    interface Command{
+        void execute();
+    }
+
+    //Invoker，调用者
+    public class switch{
+        private List<Command> list=new List();  //执行历史
+
+       public switch(){}
+
+       public void execute(Command cmd){
+            this.list.add(cmd); //执行历史
+            cmd.execute();  //调用命令类的执行方法
+       }
+    }
+
+    //receiver接收者
+    public class Light{
+        public light(){}
+
+        public void turnon(){}
+        public void turnoff(){}
+    }
+
+    //ConcreteCommand具体命令类
+    public class FlipUpCommand implements Command{
+        private Light light;
+        public FlipUpCommand(Light light){
+            this.light=light;
+        }
+
+        public void execute(){
+            light.turnon();
+        }
+    }
+     public class FlipDownCommand implements Command{
+            private Light light;
+            public FlipDownCommand(Light light){
+                this.light=light;
+            }
+
+            public void execute(){
+                light.turnoff();
+            }
+        }
+
+      //客户端
+      public class PressSwitch{
+        psvm{
+            Light lamp=new light();
+            Command swichUp=new FlipUpCommand(lamp)
+            Command switchDown=new FlipDownCommand(lamp)
+
+            Swtich myswitch=new Switch()
+
+            try{
+                if("on"){
+                    myswitch.execute(switchup)
+
+                }
+                if("off"){
+                    myswitch.execute(switchdown)
+                }
+            }
+        }
+      }

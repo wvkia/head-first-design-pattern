@@ -12,12 +12,5 @@ public class SimpleRemoteControl {
         slot.execute();
     }
 
-    public static void main(String[] args) {
-        SimpleRemoteControl remoteControl = new SimpleRemoteControl();
-        Light light = new Light();
-        LightOnCommand lightOnCommand = new LightOnCommand(light);
 
-        remoteControl.setSlot(lightOnCommand);
-        remoteControl.buttonWasPressed();
-    }
 }
